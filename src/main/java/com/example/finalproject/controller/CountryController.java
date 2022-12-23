@@ -42,6 +42,11 @@ public class CountryController {
         return new CountryResponse(savedCountry);
     }
 
+    @DeleteMapping("/{countryId}")
+    public void deleteCountry(@PathVariable long countryId){
+        countryService.deleteCountry(countryId);
+    }
+
     @PostMapping("/{countryId}/citizens")
     @ResponseStatus(HttpStatus.CREATED)
     public CitizenResponse addCitizen(@PathVariable long countryId, @RequestBody @Valid CitizenRequest citizenRequest){

@@ -29,6 +29,15 @@ public class CountryService {
         return countryRepository.save(country);
     }
 
+    public void deleteCountry(long countryId){
+        if(countryRepository.existsById(countryId)){
+            countryRepository.deleteById(countryId);
+        }
+        else{
+            throw new ResourceNotFoundException("country id was not found");
+        }
+    }
+
     public Citizen addCitizen(long countryId, CitizenRequest citizenRequest){
         Country country=countryRepository.findById(countryId).orElseThrow(
                 ()->new ResourceNotFoundException("country id was not found"));
