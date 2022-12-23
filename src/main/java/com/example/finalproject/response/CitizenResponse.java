@@ -1,6 +1,7 @@
 package com.example.finalproject.response;
 
 import com.example.finalproject.entity.Citizen;
+import com.example.finalproject.entity.Job;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,10 +15,12 @@ public class CitizenResponse {
     private long id;
     private String name;
     private CountryResponse country;
+    private JobResponse job;
 
     public CitizenResponse(Citizen citizen){
         id=citizen.getId();
         name=citizen.getName();
         country=new CountryResponse(citizen.getCountry());
+        job=new JobResponse(citizen.getJob());
     }
 }
