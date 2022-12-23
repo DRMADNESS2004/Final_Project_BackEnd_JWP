@@ -19,7 +19,7 @@ public class CountryController {
     @Autowired
     private CountryService countryService;
 
-    @GetMapping("/{countryId}")
+    @GetMapping()
     public List<CountryResponse> getAllCountries(){
         List<Country> countries=countryService.getAllCountries();
         List<CountryResponse> countryResponses=new ArrayList<>();
