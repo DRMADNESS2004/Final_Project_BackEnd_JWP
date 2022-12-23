@@ -48,6 +48,11 @@ public class CountryController {
         countryService.deleteCountry(countryId);
     }
 
+    @PutMapping("/{countryId}")
+    public CountryResponse updateCountry(@PathVariable long countryId, @Valid @RequestBody CountryRequest countryRequest){
+        return new CountryResponse(countryService.updateCountry(countryId,countryRequest));
+    }
+
     @PostMapping("/{countryId}/citizens")
     @ResponseStatus(HttpStatus.CREATED)
     public CitizenResponse addCitizen(@PathVariable long countryId, @RequestBody @Valid CitizenRequest citizenRequest){

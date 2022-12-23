@@ -28,7 +28,7 @@ public class CitizenService {
             return citizenRepository.save(citizenToBeUpdated);
         }
         else{
-            throw new ResourceNotFoundException("citizen id not found");
+            throw new ResourceNotFoundException("citizen id was not found");
         }
     }
 }

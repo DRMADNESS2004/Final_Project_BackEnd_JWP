@@ -38,6 +38,17 @@ public class CountryService {
         }
     }
 
+    public Country updateCountry(long countryId,CountryRequest countryRequest){
+        if(countryRepository.existsById(countryId)){
+            Country countryToBeUpdated=new Country(countryRequest);
+            countryToBeUpdated.setId(countryId);
+            return countryRepository.save(countryToBeUpdated);
+        }
+        else{
+            throw new ResourceNotFoundException("country id was not found");
+        }
+    }
+
     public Citizen addCitizen(long countryId, CitizenRequest citizenRequest){
         Country country=countryRepository.findById(countryId).orElseThrow(
                 ()->new ResourceNotFoundException("country id was not found"));
