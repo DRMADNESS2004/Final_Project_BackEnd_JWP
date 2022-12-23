@@ -22,7 +22,7 @@ public class Citizen {
     private String name;
 
     @Column(name="selected",nullable = false)
-    private boolean isSelected;
+    private boolean selected;
 
     @ManyToOne(optional=false)
     @OnDelete(action= OnDeleteAction.CASCADE)
@@ -35,6 +35,6 @@ public class Citizen {
     public Citizen(CitizenRequest citizenRequest){
         name=citizenRequest.getName();
         job=new Job(citizenRequest.getJob());
-        isSelected= citizenRequest.getIsSelected();
+        selected= citizenRequest.getIsSelected();
     }
 }

@@ -17,7 +17,7 @@ public class CitizenRequest {
     @NotBlank
     private String name;
     @NotNull
-    private Boolean isSelected;
+    private Boolean selected;
     @NotNull
     @Valid
     private JobRequest job;
