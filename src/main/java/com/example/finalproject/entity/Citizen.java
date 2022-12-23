@@ -26,7 +26,11 @@ public class Citizen {
     @JoinColumn(name="country_id")
     private Country country;
 
+    @OneToOne(cascade=CascadeType.ALL, optional=false)
+    private Job job;
+
     public Citizen(CitizenRequest citizenRequest){
-        name= citizenRequest.getName();
+        name=citizenRequest.getName();
+        job=new Job(citizenRequest.getJob());
     }
 }
