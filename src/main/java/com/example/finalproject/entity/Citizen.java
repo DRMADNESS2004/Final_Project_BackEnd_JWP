@@ -1,5 +1,6 @@
 package com.example.finalproject.entity;
 
+import com.example.finalproject.request.CitizenRequest;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,4 +25,8 @@ public class Citizen {
     @OnDelete(action= OnDeleteAction.CASCADE)
     @JoinColumn(name="country_id")
     private Country country;
+
+    public Citizen(CitizenRequest citizenRequest){
+        name= citizenRequest.getName();
+    }
 }
