@@ -22,8 +22,12 @@ public class Country {
     @Column(nullable=false)
     private int population;
 
+    @Column(nullable=false)
+    private boolean isSelected;
+
     public Country(CountryRequest countryRequest){
         name=countryRequest.getName();
         population=countryRequest.getPopulation();
+        isSelected=countryRequest.getIsSelected();
     }
 }

@@ -21,6 +21,9 @@ public class Citizen {
     @Column(nullable=false)
     private String name;
 
+    @Column(nullable = false)
+    private boolean isSelected;
+
     @ManyToOne(optional=false)
     @OnDelete(action= OnDeleteAction.CASCADE)
     @JoinColumn(name="country_id")
@@ -32,5 +35,6 @@ public class Citizen {
     public Citizen(CitizenRequest citizenRequest){
         name=citizenRequest.getName();
         job=new Job(citizenRequest.getJob());
+        isSelected= citizenRequest.getIsSelected();
     }
 }

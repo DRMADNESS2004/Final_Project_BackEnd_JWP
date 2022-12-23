@@ -16,7 +16,8 @@ import lombok.Setter;
 public class CitizenRequest {
     @NotBlank
     private String name;
-
+    @NotNull
+    private Boolean isSelected;
     @NotNull
     @Valid
     private JobRequest job;

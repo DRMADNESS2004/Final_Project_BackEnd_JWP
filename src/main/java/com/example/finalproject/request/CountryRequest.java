@@ -11,5 +11,7 @@ public class CountryRequest {
     @NotBlank
     private String name;
     @NotNull
+    private Boolean isSelected;
+    @NotNull
     private Integer population;
 }

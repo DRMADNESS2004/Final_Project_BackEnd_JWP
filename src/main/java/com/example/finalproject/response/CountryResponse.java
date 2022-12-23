@@ -14,10 +14,12 @@ public class CountryResponse {
     private long id;
     private String name;
     private int population;
+    private boolean isSelected;
 
     public CountryResponse(Country country){
         id=country.getId();
         name= country.getName();
         population= country.getPopulation();
+        isSelected= country.isSelected();
     }
 }

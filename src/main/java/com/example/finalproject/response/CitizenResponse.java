@@ -14,12 +14,14 @@ import lombok.Setter;
 public class CitizenResponse {
     private long id;
     private String name;
+    private boolean isSelected;
     private CountryResponse country;
     private JobResponse job;
 
     public CitizenResponse(Citizen citizen){
         id=citizen.getId();
         name=citizen.getName();
+        isSelected= citizen.isSelected();
         country=new CountryResponse(citizen.getCountry());
         job=new JobResponse(citizen.getJob());
     }
