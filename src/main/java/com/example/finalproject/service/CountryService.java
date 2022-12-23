@@ -37,4 +37,8 @@ public class CountryService {
         citizenToBeSaved.setCountry(country);
         return citizenRepository.save(citizenToBeSaved);
     }
+
+    public List<Citizen> getAllCitizens(long countryId){
+        return citizenRepository.findAllByCountryId(countryId);
+    }
 }
