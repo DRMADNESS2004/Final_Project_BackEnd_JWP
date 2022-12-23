@@ -21,7 +21,7 @@ public class Citizen {
     @Column(nullable=false)
     private String name;
 
-    @Column(nullable = false)
+    @Column(name="selected",nullable = false)
     private boolean isSelected;
 
     @ManyToOne(optional=false)
