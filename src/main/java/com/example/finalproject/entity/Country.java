@@ -28,6 +28,6 @@ public class Country {
     public Country(CountryRequest countryRequest){
         name=countryRequest.getName();
         population=countryRequest.getPopulation();
-        selected=countryRequest.getIsSelected();
+        selected=countryRequest.getSelected();
     }
 }

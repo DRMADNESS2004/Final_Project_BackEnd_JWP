@@ -35,6 +35,6 @@ public class Citizen {
     public Citizen(CitizenRequest citizenRequest){
         name=citizenRequest.getName();
         job=new Job(citizenRequest.getJob());
-        selected= citizenRequest.getIsSelected();
+        selected= citizenRequest.getSelected();
     }
 }
