@@ -19,7 +19,7 @@ public class CitizenController {
         citizenService.deleteCitizen(citizenId);
     }
 
-    @PatchMapping("/{citizenId}")
+    @PutMapping("/{citizenId}")
     public CitizenResponse updateCitizen(@PathVariable long citizenId, @Valid @RequestBody CitizenRequest citizenRequest){
         return new CitizenResponse(citizenService.updateCitizen(citizenId,citizenRequest));
     }
