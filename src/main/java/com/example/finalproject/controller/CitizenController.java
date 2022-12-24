@@ -1,6 +1,7 @@
 package com.example.finalproject.controller;
 
 import com.example.finalproject.request.CitizenRequest;
+import com.example.finalproject.request.CountryRequest;
 import com.example.finalproject.response.CitizenResponse;
 import com.example.finalproject.service.CitizenService;
 import com.example.finalproject.service.CountryService;
@@ -14,6 +15,11 @@ import org.springframework.web.bind.annotation.*;
 public class CitizenController {
     @Autowired
     private CitizenService citizenService;
+
+    @GetMapping("/{citizenId}")
+    public CitizenResponse getCitizen(@PathVariable long citizenId){
+        return new CitizenResponse((citizenService.getCitizen(citizenId)));
+    }
 
     @DeleteMapping("/{citizenId}")
     public void deleteCitizen(@PathVariable long citizenId){
