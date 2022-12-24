@@ -48,6 +48,11 @@ public class CountryController {
         countryService.deleteCountry(countryId);
     }
 
+    /*@PatchMapping("/{countryId}")
+    public CountryResponse updateCountry(@PathVariable long countryId, @Valid @RequestBody CountryRequest countryRequest){
+        return new CountryResponse(countryService.updateCountry(countryId,countryRequest));
+    }*/
+
     @PutMapping("/{countryId}")
     public CountryResponse updateCountry(@PathVariable long countryId, @Valid @RequestBody CountryRequest countryRequest){
         return new CountryResponse(countryService.updateCountry(countryId,countryRequest));
