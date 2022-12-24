@@ -22,7 +22,7 @@ public class Country {
     @Column(nullable=false)
     private int population;
 
-    @Column(name="selected",nullable=false)
+    @Column(nullable=false)
     private boolean selected;
 
     public Country(CountryRequest countryRequest){
