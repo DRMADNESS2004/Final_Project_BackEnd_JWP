@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface CitizenRepository extends CrudRepository<Citizen,Long> {
     List<Citizen> findAllByCountryId(long countryId);
+    List<Citizen> findAll();
 }

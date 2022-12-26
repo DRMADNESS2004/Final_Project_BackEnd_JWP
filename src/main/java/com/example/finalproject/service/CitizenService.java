@@ -9,14 +9,15 @@ import com.example.finalproject.request.CountryRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CitizenService {
     @Autowired
     private CitizenRepository citizenRepository;
 
-    public Citizen getCitizen(long citizenId){
-        Citizen citizen=citizenRepository.findById(citizenId).orElseThrow(()->new ResourceNotFoundException("citizen id was not found"));
-        return citizen;
+    public List<Citizen> getAllCitizens(){
+        return citizenRepository.findAll();
     }
 
     public void deleteCitizen(long citizenId){
