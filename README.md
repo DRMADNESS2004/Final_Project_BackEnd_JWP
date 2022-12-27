@@ -11,12 +11,21 @@ I created a Country entity that has String name, int population and boolean sele
 
 - **GET /api/possibleCountries**     
     - Gets all possible countries
-* **GET /api/countries**     Gets all countries
-+ **POST /api/countries**     Adds a new country
-- **DELETE /api/countries/:countryId**     Deletes a country based on its id
-* **PUT /api/countries/:countryId**     Updates a country based on its id
-+ **POST /api/countries/:countryId/citizens**     Adds a new citizen to a country based on its id
-- **GET /api/countries/:countryId/citizens**     Gets all citizens of a country based on its id
-* **GET /api/citizens**     Gets all citizens
-+ **Delete /api/citizen/:citizenId**     Delete a citizen based on its id
-- **PUT /api/citizens/:citizenId**     Updates a citizen based on its id
+* **GET /api/countries**     
+    - Gets all countries
++ **POST /api/countries**     
+    - Adds a new country
+- **DELETE /api/countries/:countryId**     
+    - Deletes a country based on its id
+* **PUT /api/countries/:countryId**     
+    - Updates a country based on its id
++ **POST /api/countries/:countryId/citizens**     
+    - Adds a new citizen to a country based on its id
+- **GET /api/countries/:countryId/citizens**     
+    - Gets all citizens of a country based on its id
+* **GET /api/citizens**     
+    - Gets all citizens
++ **Delete /api/citizen/:citizenId**     
+    - Delete a citizen based on its id
+- **PUT /api/citizens/:citizenId**     
+    - Updates a citizen based on its id
