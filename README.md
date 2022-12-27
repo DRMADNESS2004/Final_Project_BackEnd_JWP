@@ -10,7 +10,7 @@ I created a Country entity that has String name, int population and boolean sele
 ### End-points documentation for backend:
 
 - **GET /api/possibleCountries**     
-    - Gets all possible countries
+    - Gets all possible countries in the world with their population and name
 * **GET /api/countries**     
     - Gets all countries
 + **POST /api/countries**     
