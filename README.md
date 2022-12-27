@@ -9,7 +9,8 @@ I created a Country entity that has String name, int population and boolean sele
 
 ### End-points documentation for backend:
 
-- **GET /api/possibleCountries**     Gets all possible countries
+- **GET /api/possibleCountries**     
+    - Gets all possible countries
 * **GET /api/countries**     Gets all countries
 + **POST /api/countries**     Adds a new country
 - **DELETE /api/countries/:countryId**     Deletes a country based on its id
